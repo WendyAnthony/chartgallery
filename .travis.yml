@@ -4,7 +4,8 @@ r_packages:
   - devtools
 r_github_packages:
   - rstudio/rmarkdown
-script:
+install:
   - chmod 755 .push_gh_pages.sh
   - chmod 755 ghgenerate.R
+script:
   - ./.push_gh_pages.sh
