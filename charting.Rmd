@@ -12,6 +12,8 @@ knitr::opts_chunk$set(echo = TRUE)
 
 This is intended as a gallery / cookbook of different visualisation libraries in R. You can toggle overall code visibility in the top right-hand corner.
 
+If you can improve the code or expand the charts or packages included, then please do so! [Go to repo](https://github.com/stephlocke/chartgallery)
+
 # Packages {.tabset}
 
 
@@ -20,3 +22,4 @@ This is intended as a gallery / cookbook of different visualisation libraries in
 
 ```{r vegalite, child='vegalite.Rmd'}
 ```
+

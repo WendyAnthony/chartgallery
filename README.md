@@ -1,7 +1,8 @@
+[![Build Status](https://travis-ci.org/stephlocke/chartgallery.svg?branch=master)](https://travis-ci.org/stephlocke/chartgallery)
 
 There's so many R graphics packages these days and I wanted to be able to see how they all perform different charting tasks.
 
-## Contents
+## Covered packages
 - ggplot2
 - vegalite
 
