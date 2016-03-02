@@ -1,0 +1,22 @@
+---
+title: "Different charting libraries"
+date: "`r Sys.Date()`"
+output: 
+  html_document: 
+    code_folding: show
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+This is intended as a gallery / cookbook of different visualisation libraries in R. You can toggle overall code visibility in the top right-hand corner.
+
+# Packages {.tabset}
+
+
+```{r ggplot2, child='ggplot2.Rmd'}
+```
+
+```{r vegalite, child='vegalite.Rmd'}
+```

@@ -1,0 +1,121 @@
+## vegalite {.tabset}
+```{r, include=FALSE}
+knitr::read_chunk("vegalite.R")
+```
+
+[Vega](http://vega.github.io/vega/) is a grammar of graphics implementation that takes JSON and converts the results to HTML5 or SVG. [Vega-Lite](https://vega.github.io/vega-lite/) provides layer over the top of Vega to reduce the burden of generating the JSON specifications required.
+
+[Bob Rudis](http://rud.is/) developed an R binding of vegalite, currently available on github( [hrbrmstr/vegalite](https://github.com/hrbrmstr/vegalite) ). 
+
+Much of the code used in this is taken from, or loosely based on, the code Bob wrote in [his reproduction](http://rud.is/projects/vegalite01.html) of the Vega gallery.
+
+Limitations:
+
+ - Can't produce boxplots
+ - vegalite does not produce interactive charts
+
+```{r setup, results='hide', warning=FALSE, message=FALSE, echo=TRUE}
+```
+
+### Basic
+
+#### Bar chart
+```{r barchart}
+```
+
+```{r aggbarchart}
+```
+
+```{r groupedbarchart}
+```
+
+#### Scatter plot
+```{r scatterplot}
+```
+
+```{r scatterplotcircles}
+```
+
+```{r binnedscatterplot}
+```
+
+```{r colouredscatterplot}
+```
+
+```{r colouredtextscatterplot}
+```
+
+```{r scatterplotlogscale}
+```
+
+```{r bubblechart}
+```
+
+#### Line chart
+
+```{r linechart}
+```
+
+```{r multiserieslinechart}
+```
+
+#### Others
+```{r histogram}
+```
+
+```{r areachart}
+```
+
+```{r boxplot}
+```
+
+### Stacked and Layered Plots 
+```{r stackedbar}
+```
+
+```{r horizstackedbar}
+```
+
+```{r normalisedstackedbar}
+```
+
+```{r stackedarea}
+```
+
+```{r normalisedstackedarea}
+```
+
+```{r layeredbar}
+```
+
+### Trellis Plots 
+```{r trellisbar}
+```
+
+```{r trellisstackedbar}
+```
+
+```{r trellisscatter}
+```
+
+```{r trellishistogram}
+```
+
+```{r trelliscolouredscatterplot}
+```
+
+### Uncommon charts
+```{r steamgraph}
+```
+
+```{r networkgraph}
+```
+
+```{r beechart}
+```
+
+```{r stripplot}
+```
+
+```{r slopegraph}
+```

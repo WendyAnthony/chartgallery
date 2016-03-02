@@ -1,0 +1,113 @@
+## ggplot2 {.tabset}
+```{r, include=FALSE}
+knitr::read_chunk("ggplot2.R")
+```
+
+
+ggplot2 is the way most people make plots with R these days.
+
+
+```{r setup, results='hide', warning=FALSE, message=FALSE}
+```
+
+### Basic
+#### Bar chart
+```{r barchart}
+```
+
+```{r aggbarchart}
+```
+
+```{r groupedbarchart}
+```
+
+#### Scatter plot
+```{r scatterplot}
+```
+
+```{r scatterplotcircles}
+```
+
+```{r binnedscatterplot}
+```
+
+```{r colouredscatterplot}
+```
+
+```{r colouredtextscatterplot}
+```
+
+```{r scatterplotlogscale}
+```
+
+```{r bubblechart}
+```
+
+#### Line chart
+
+```{r linechart}
+```
+
+```{r multiserieslinechart}
+```
+
+#### Others
+```{r histogram}
+```
+
+```{r areachart}
+```
+
+```{r boxplot}
+```
+
+### Stacked and Layered Plots 
+```{r stackedbar}
+```
+
+```{r horizstackedbar}
+```
+
+```{r normalisedstackedbar}
+```
+
+```{r stackedarea}
+```
+
+```{r normalisedstackedarea}
+```
+
+```{r layeredbar}
+```
+
+### Trellis Plots 
+```{r trellisbar}
+```
+
+```{r trellisstackedbar}
+```
+
+```{r trellisscatter}
+```
+
+```{r trellishistogram}
+```
+
+```{r trelliscolouredscatterplot}
+```
+
+### Uncommon charts
+```{r steamgraph}
+```
+
+```{r networkgraph}
+```
+
+```{r beechart}
+```
+
+```{r stripplot}
+```
+
+```{r slopegraph}
+```
