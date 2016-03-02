@@ -4,14 +4,10 @@ rm -rf out || exit 0;
 mkdir out;
 
 REPO="chartgallery"
-
 GH_REPO="@github.com/stephlocke/$REPO.git"
-
 FULL_REPO="https://$GH_TOKEN$GH_REPO"
 
-R_SCRIPT="../$REPO/ghgenerate.R"
-
-R CMD BATCH R_SCRIPT
+R CMD BATCH '../chartgallery/ghgenerate.R'
 
 cp ghgenerate.Rout out
 cd out
