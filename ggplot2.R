@@ -150,6 +150,7 @@ ggplot(seatbeltsAgg[order(year,law),], aes(x=year, y=DriversKilled
   geom_area(position="fill")
 
 ## ---- layeredbar                  --------------
+# This is inelegant!
 seatbeltsAgg<-seatbelts[
   ,.(DriversKilled = sum(DriversKilled))
   ,.(year,law=as.factor(law))]
@@ -157,8 +158,7 @@ seatbeltsAgg<-seatbelts[
 ggplot( mapping = aes(x=year, y=DriversKilled
                          ,fill=law)) +
   geom_bar(data=seatbeltsAgg[law=="1",],stat="identity", alpha=.5)+
-  geom_bar(data=seatbeltsAgg[law=="0",],stat="identity", alpha=.5)+
-  title("This is inelegant!")
+  geom_bar(data=seatbeltsAgg[law=="0",],stat="identity", alpha=.5)
 
 ## ---- trellisbar                  --------------
 seatbeltsAgg<-seatbelts[
