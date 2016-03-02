@@ -3,7 +3,7 @@
 rm -rf out || exit 0;
 mkdir out;
 
-$REPO=chartgallery
+$REPO="chartgallery"
 
 GH_REPO="@github.com/stephlocke/$REPO.git"
 
