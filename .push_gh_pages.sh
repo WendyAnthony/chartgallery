@@ -9,7 +9,9 @@ GH_REPO="@github.com/stephlocke/$REPO.git"
 
 FULL_REPO="https://$GH_TOKEN$GH_REPO"
 
-R CMD BATCH '../$REPO/ghgenerate.R'
+R_SCRIPT="../$REPO/ghgenerate.R"
+
+R CMD BATCH R_SCRIPT
 
 cp ghgenerate.Rout out
 cd out
