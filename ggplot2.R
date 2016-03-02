@@ -150,11 +150,50 @@ ggplot(seatbeltsAgg[order(year,law),], aes(x=year, y=DriversKilled
   geom_area(position="fill")
 
 ## ---- layeredbar                  --------------
+seatbeltsAgg<-seatbelts[
+  ,.(DriversKilled = sum(DriversKilled))
+  ,.(year,law=as.factor(law))]
+
+ggplot( mapping = aes(x=year, y=DriversKilled
+                         ,fill=law)) +
+  geom_bar(data=seatbeltsAgg[law=="1",],stat="identity", alpha=.5)+
+  geom_bar(data=seatbeltsAgg[law=="0",],stat="identity", alpha=.5)+
+  title("This is inelegant!")
+
 ## ---- trellisbar                  --------------
+seatbeltsAgg<-seatbelts[
+  ,.(DriversKilled = sum(DriversKilled))
+  ,.(year,law)]
+
+ggplot(seatbeltsAgg, aes(x=year, y=DriversKilled)) +
+  geom_bar(stat="identity")+
+  facet_wrap(~law)
+
 ## ---- trellisstackedbar           --------------
+seatbeltsAgg<-seatbelts[
+  ,.(DriversKilled = sum(DriversKilled))
+  ,.(year,law,PetrolPrice=cut(PetrolPrice,breaks = 5))]
+
+ggplot(seatbeltsAgg, aes(x=year, y=DriversKilled, fill=PetrolPrice)) +
+  geom_bar(stat="identity")+
+  facet_wrap(~law)
+
 ## ---- trellisscatter              --------------
+ggplot(seatbelts, aes(x=PetrolPrice, y=DriversKilled)) +
+  geom_point()+
+  facet_wrap(~law)
+
 ## ---- trellishistogram            --------------
+ggplot(seatbelts, aes(x=PetrolPrice, y=..count..) )+
+  geom_histogram()+
+  facet_wrap(~law)
+
 ## ---- trelliscolouredscatterplot  --------------
+ggplot(seatbelts, aes(x=PetrolPrice, y=DriversKilled
+                      , colour = as.factor(law))) +
+  geom_point()+
+  facet_wrap(~law)
+
 ## ---- steamgraph                  --------------
 ## ---- networkgraph                --------------
 ## ---- beechart                    --------------
