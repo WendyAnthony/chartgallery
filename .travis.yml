@@ -1,10 +1,7 @@
 language: r
 cache: packages
-r_packages:
-  - devtools
-r_github_packages:
-  - rstudio/rmarkdown
 install:
+  - Rscript -e 'install.packages("devtools");devtools::install_github("rstudio/rmarkdown")'
   - chmod 755 .push_gh_pages.sh
   - chmod 755 ghgenerate.R
 script:
