@@ -3,11 +3,13 @@
 rm -rf out || exit 0;
 mkdir out;
 
-GH_REPO="@github.com/stephlocke/chartgallery.git"
+$REPO=chartgallery
+
+GH_REPO="@github.com/stephlocke/$REPO.git"
 
 FULL_REPO="https://$GH_TOKEN$GH_REPO"
 
-R CMD BATCH '../Rtraining/ghgenerate.R'
+R CMD BATCH '../$REPO/ghgenerate.R'
 
 cp ghgenerate.Rout out
 cd out
