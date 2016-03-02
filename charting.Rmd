@@ -14,7 +14,7 @@ This is intended as a gallery / cookbook of different visualisation libraries in
 
 If you can improve the code or expand the charts or packages included, then please do so! [Go to repo](https://github.com/stephlocke/chartgallery)
 
-# Packages {.tabset}
+# General packages {.tabset}
 
 
 ```{r ggplot2, child='ggplot2.Rmd'}
