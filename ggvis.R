@@ -1,5 +1,6 @@
 ## ---- setup                       --------------
 source("genericprep.R")
+if(!require(ggvis)) install.packages("ggvis")
 library(ggvis)
 
 ## ---- barchart                    --------------
