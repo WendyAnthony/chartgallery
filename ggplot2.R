@@ -69,7 +69,7 @@ seatbeltsAgg<-seatbelts[
 
 ggplot(seatbeltsAgg, aes(x=year, y=PetrolPrice
                          , size=DriversKilled)) +
-  geom_point(alpha=0.5)
+  geom_point()
 
 ## ---- scatterplotlogscale         --------------
 ggplot(seatbelts, aes(x=PetrolPrice, y=DriversKilled)) +
