@@ -7,3 +7,7 @@ seatbelts<-data.table(date=seq(as.Date("1969-01-01")
                       , Seatbelts)[
                         ,year:=year(date)
                       ]
+
+if(!require(sna)) install.packages("sna")
+library(sna)
+graphNet<-rgraph(10)

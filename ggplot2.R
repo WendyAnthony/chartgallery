@@ -3,6 +3,16 @@ source("genericprep.R")
 if(!require(ggplot2)) install.packages("ggplot2")
 library(ggplot2)
 
+# Network chart
+if(!require(GGally)) install.packages("GGally")
+if(!require(network)) install.packages("network")
+library(GGally)
+
+# Beeswarm
+if(!require(ggbeeswarm)) install.packages("ggbeeswarm")
+library(ggbeeswarm)
+
+
 ## ---- barchart                    --------------
 ggplot(seatbelts, aes(x=date, y=DriversKilled)) +
   geom_bar(stat="identity")
@@ -196,7 +206,12 @@ ggplot(seatbelts, aes(x=PetrolPrice, y=DriversKilled
 
 ## ---- steamgraph                  --------------
 ## ---- networkgraph                --------------
+GGally::ggnet2(graphNet)
+
 ## ---- beechart                    --------------
+ggplot(seatbelts, aes(x=as.factor(law), y=DriversKilled)) +
+  ggbeeswarm::geom_beeswarm()
+
 ## ---- stripplot                   --------------
 ## ---- slopegraph                  --------------
 

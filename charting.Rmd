@@ -7,7 +7,7 @@ output:
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = TRUE, message = FALSE)
 ```
 
 This is intended as a gallery / cookbook of different visualisation libraries in R. You can toggle overall code visibility in the top right-hand corner.
