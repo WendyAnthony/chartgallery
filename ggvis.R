@@ -23,12 +23,51 @@ seatbelts %>% #group_by(year) %>%
 #   layer_bars()
 
 ## ---- scatterplot                 --------------
+seatbelts %>%
+  ggvis(~PetrolPrice, ~DriversKilled) %>%
+  layer_points()
+
 ## ---- scatterplotcircles          --------------
+seatbelts %>%
+  ggvis(~PetrolPrice, ~DriversKilled) %>%
+  layer_points(fillOpacity:=0, stroke:="black")
+
 ## ---- binnedscatterplot           --------------
+seatbeltsAgg<-seatbelts[
+  ,.(DriversKilled = sum(DriversKilled))
+  ,.(year,PetrolPrice=cut(PetrolPrice,breaks = 10))]
+
+seatbeltsAgg %>%
+  ggvis(~PetrolPrice, ~year, size=~DriversKilled) %>%
+  layer_points(fillOpacity:=0, stroke:="black")
+
 ## ---- colouredscatterplot         --------------
+seatbelts %>%
+  ggvis(~PetrolPrice, ~DriversKilled, fill=~as.factor(law)) %>%
+  layer_points()
+
 ## ---- colouredtextscatterplot     --------------
+seatbelts %>%
+  ggvis(~PetrolPrice, ~DriversKilled
+        , fill=~as.factor(law), text:=~as.character(law)) %>%
+  layer_text()
+
 ## ---- bubblechart                 --------------
+seatbeltsAgg<-seatbelts[
+  ,.(DriversKilled = sum(DriversKilled))
+  ,.(year,PetrolPrice)]
+
+seatbeltsAgg %>%
+  ggvis(~year, ~PetrolPrice
+        , size=~DriversKilled) %>%
+  layer_points()
+
 ## ---- scatterplotlogscale         --------------
+seatbelts %>%
+  ggvis(~PetrolPrice, ~DriversKilled) %>%
+  layer_points() %>%
+  scale_numeric(property= "y", trans = "log")
+
 ## ---- linechart                   --------------
 ## ---- multiserieslinechart        --------------
 ## ---- histogram                   --------------
