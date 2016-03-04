@@ -25,3 +25,9 @@ If you can improve the code or expand the charts or packages included, then plea
 
 ```{r ggvis, child='ggvis.Rmd'}
 ```
+
+# Hygiene
+
+```{r}
+sessionInfo()
+```
