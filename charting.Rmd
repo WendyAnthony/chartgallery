@@ -15,15 +15,13 @@ This is intended as a gallery / cookbook of different visualisation libraries in
 If you can improve the code or expand the charts or packages included, then please do so! [Go to repo](https://github.com/stephlocke/chartgallery)
 
 # General packages {.tabset}
-
+## Notes
+The [ggvis gallery](ggvis.html) is currently seperate as it has an old version of the vega library resulting in problems with the vegalite package right now.
 
 ```{r ggplot2, child='ggplot2.Rmd'}
 ```
 
 ```{r vegalite, child='vegalite.Rmd'}
-```
-
-```{r ggvis, child='ggvis.Rmd'}
 ```
 
 # Hygiene
